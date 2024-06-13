@@ -14,7 +14,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 10vh;
+    height: 20vh;
 }
 
 li > a{
@@ -87,7 +87,7 @@ li{
     font-weight: bold;
 }
 
-#inputEmail{
+#inputText{
     width: 40vw;
     height: 5vh;
 }

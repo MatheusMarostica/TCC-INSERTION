@@ -13,3 +13,11 @@ create table user_table(
     email VARCHAR(255) unique not null,
     senha VARCHAR(255) not null
 );
+
+create table feed (
+id int auto_increment primary key,
+imagem varchar(10),
+texto varchar(255) not null
+);
+
+select*from feed;
