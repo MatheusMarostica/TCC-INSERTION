@@ -4,6 +4,6 @@ const router = Router();
 
 const { storeTask } = require('../controller/taskController');
 
-router.post('/store/task', storeTask);
+router.post('/post/enviar', storeTask);
 
 module.exports = router;

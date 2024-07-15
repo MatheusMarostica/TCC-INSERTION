@@ -4,11 +4,10 @@ const dotenv = require('dotenv').config();
 async function storefeed(request, response) {
 
     const params = Array(
-        request.body.imagem,
-        request.body.texto
+        request.body.inputText
     );
 
-    const query = "INSERT INTO feed(imagem,texto) VALUES(?,?)";
+    const query = "INSERT INTO feed(texto) VALUES(?)";
 
     connection.query(query, params, (err, results) => {
         if(results) {
