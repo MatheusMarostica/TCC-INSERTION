@@ -1,143 +1,148 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: montserrat;
+  padding: 0;
+  margin: 0;
+  font-family: montserrat;
 }
 
-.logo{
-    height: 28vh;
-    width: 14vw;
-    margin-top: -10px;
-}   
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 20vh;
+.logo {
+  height: 28vh;
+  width: 14vw;
+  margin-top: -10px;
 }
 
-li > a{
-    display: flex;
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    align-items: center;
-    justify-content: space-between;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20vh;
 }
 
-li > a:hover{
-    color: gray;
+li>a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li>a:hover {
+  color: gray;
+  
 }
 
 ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
-li{
-    font-weight: bold;
+li {
+  font-weight: bold;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 99.8vw;
-    background-blend-mode: color;
-    font-weight: bold;
-    align-content: center;
-    gap: 10vh;
-    background-color: rgba(184, 184, 184, 0.397);
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 99.8vw;
+  background-blend-mode: color;
+  font-weight: bold;
+  align-content: center;
+  gap: 10vh;
+  background-color: rgba(184, 184, 184, 0.397);
 }
 
-.form > h3{
-    font-weight: bold;
-    font-size: 35pt;
+.form>h3 {
+  font-weight: bold;
+  font-size: 35pt;
 }
 
 /* style dos cards */
 .post-card {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 40vw;
-  }
-  
-  .post-card p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-
-  .post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .post .box {
-    display: none; 
-  }
-  
-  .mb-3 {
-    margin-bottom: 20px;
-  }
-  
-  .form-control {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-  }
-  
-  .btn-primary {
-    color: #000000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 41vw;
-    height: 6vh;
-  }
-  
-  .btn-primary:hover {
-    background-color: #000000;
-    color: #fff;
-    transition: all ease;
-  }
-
-.mb-3{
-    width: 40vw;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 40vw;
 }
 
-.form-label {
-    margin-top: 4vh;
+.post-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.post .box {
+  display: none;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-control:hover{
+  border: 1px solid #818181;
 }
 
 .btn-primary {
-    height: 5vh;
-    margin-top: 3vh;
-    border-radius: 10px;
-    border: none;
-    font-weight: bold;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 41vw;
+  height: 6vh;
+  transition: all 0.5s ease-in-out;
 }
 
-#inputText{
-    width: 40vw;
-    height: 5vh;
+.btn-primary:hover {
+  background-color: #000000;
+  color: #fff;
 }
 
-.post{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+.mb-3 {
+  width: 40vw;
+}
+
+.form-label {
+  margin-top: 4vh;
+}
+
+.btn-primary {
+  height: 5vh;
+  margin-top: 3vh;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+#inputText {
+  width: 40vw;
+  height: 5vh;
+}
+
+.post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
 
 /* .box{
