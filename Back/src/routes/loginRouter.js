@@ -1,18 +1,6 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const cors = require("cors");
-const router = require("./routes/taskrouter");
-const feedrouter = require("./routes/feedRouter");
-const userRouter = require("./routes/loginRouter");
-const app = express();
+const router = require("express").Router();
+const { storelogin } = require('../controller/loginController')
 
-app.set("port", process.env.PORT || 3001);
+router.post('/store/login', storelogin);
 
-app.use(cors());
-app.use(express.json());
-
-app.use("/api", router);
-app.use("/api", feedrouter);
-app.use("/api", loginRouter);
-
-module.exports = app;
+module.exports = router;

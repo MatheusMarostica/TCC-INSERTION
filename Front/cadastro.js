@@ -16,7 +16,7 @@ async function handleSubmit(event) {
         senha
     }
 
-    const response = await fetch('http://localhost:3001/api/store/user', {
+    const response = await fetch('http://localhost:3002/api/store/user', {
         method: 'POST',
         headers: { "Content-Type": "application/json;charset=UTF-8" },
         body: JSON.stringify(data)
@@ -26,9 +26,11 @@ async function handleSubmit(event) {
     console.log(results);
     if(results.success) {        
         alert(results.message)
+        window.location.href="login.html"
         //redirecionar para a pagina correta
     } else {
         alert(results.message)
         console.log(results.data)
     }
+
 }

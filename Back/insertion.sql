@@ -21,7 +21,6 @@ drop table user_table;
 
 create table feed (
 id int auto_increment primary key,
-imagem varchar(10),
 texto varchar(255) not null
 );
 

@@ -8,26 +8,23 @@
   <link rel="stylesheet" href="login.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="imagex/png" href="img/mini logo.png">
   <title>Insertion | Login</title>
 </head>
 
-<body>
+<>
   <section class="coluna-1">
     <div class="page">
       <form method="POST" class="formLogin">
         <p>Faça seu login</p>
         <label for="email">E-mail</label>
-        <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+        <input type="email" id="email" placeholder="Digite seu e-mail" autofocus="true" />
         <label for="password">Senha</label>
-        <input type="password" placeholder="Digite sua senha" />
+        <input type="password" id ="senha" placeholder="Digite sua senha" />
         <a href="cadastro.html">Esqueci minha senha</a>
-        <input type="button" onclick=handleSubmit(event) value="Login" class="btn" />
+        <input type="button" onclick="handleSubmit(event)" value="Login" class="btn" />
       </form>
     </div>
   </section>
@@ -35,7 +32,7 @@
   <section class="coluna-2">
     <img src="img/logo clara.png" id="logo">
   </section>
-  
+<script src="login.js"></script>
 </body>
 
 </html>
