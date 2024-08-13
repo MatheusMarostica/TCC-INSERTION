@@ -17,12 +17,22 @@ async function handleSubmit(event) {
 
     const results = await response.json();
     console.log(results);
-
-    if(results.success) {        
-        alert(results.message);
-        window.location.href="feed.html"; // redirecionar para a página correta
+    if (results.success) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Seus login foi feito com sucesso",
+          showConfirmButton: false,
+          timer: 1500
+        }).then((result) => {
+          if (result.dismiss === Swal.DismissReason.timer) {
+            setTimeout(() => {
+              window.location.href = "feed.html"; // redirecionar para a página de login
+            }, 0); // tempo de espera em milissegundos (0 segundos, pois o timer já foi executado)
+          }
+        });
     } else {
-        alert(results.message);
-        console.log(results.data);
+        alert(results.message)
+        console.log(results.data)
     }
 }

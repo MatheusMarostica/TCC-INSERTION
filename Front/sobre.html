@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="feed.css" />
+    <link rel="stylesheet" href="sobre.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,32 +24,19 @@
                 <img src="img/logoimg.png" alt="alternative_text" id="logo">
             </a>
             <ul>
-                <li><a href="feed.html" id="feed">Feed</a></li>
+                <li><a href="feed.html">Feed</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="sobre.html" id="sobre">Sobre</a></li>
                 <li><a href="perfil.html">Perfil</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="form">
-        <h3 class="cadastre-se">Faça sua postagem!</h3>
-        <section class="bloco_forms">
-            <form>
-                <div class="mb-3">
-                    <label for="inputEmail" class="form-label"></label>
-                    <input type="text" class="form-control" id="inputText" placeholder="Escreva sobre o que você está pensando ou fazendo.">
-
-                </div>
-            </form>
-
-            <button type="submit" class="btn-primary" id="handleSubmit">Postar</button>
-        </section>
+        <h1 class="titulo-form" id="form-titulo">Sobre o site</h1>
     </div>
-    <div id="feed-container" class="post">
-        <div class="box"></div>
-    </div>
+
     <script src="feed.js"></script>
 </body>
 

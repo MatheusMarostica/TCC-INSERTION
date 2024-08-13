@@ -40,13 +40,21 @@ li {
   font-weight: bold;
 }
 
+#feed{
+  color: gray;
+}
+
+#feed:hover{
+  color: black;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 80vh;
-  width: 99.8vw;
+  width: 98.7vw;
   background-blend-mode: color;
   font-weight: bold;
   align-content: center;
@@ -145,9 +153,20 @@ li {
   background-color: white;
 }
 
-/* .box{
-    display: flex;
-    justify-content: center;
-    background-color: gray;
-    width: 60%;
-} */
+.delete-button {
+  background-color: #ff6961; /* cor de fundo do botão */
+  color: #ffffff; /* cor do texto do botão */
+  border: none; /* remove borda do botão */
+  padding: 10px 20px; /* espaçamento interno do botão */
+  font-size: 16px; /* tamanho do texto do botão */
+  cursor: pointer; /* muda o cursor para uma mão quando o usuário passa o mouse sobre o botão */
+  border-radius: 5px; /* arredonda as bordas do botão */
+}
+
+.delete-button:hover {
+  background-color: #ff3737; /* muda a cor de fundo do botão quando o usuário passa o mouse sobre ele */
+}
+
+.delete-button:active {
+  background-color: #ff0000; /* muda a cor de fundo do botão quando o usuário clica nele */
+}

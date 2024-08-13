@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: montserrat;
+  }
+  
+  .logo {
+    height: 28vh;
+    width: 14vw;
+    margin-top: -10px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20vh;
+  }
+  
+  li>a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  li>a:hover {
+    color: gray;
+    
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  li {
+    font-weight: bold;
+  }
+
+  
