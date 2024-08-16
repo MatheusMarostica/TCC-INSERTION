@@ -1,6 +1,7 @@
 async function handleSubmit(event) {
     event.preventDefault();
 
+    const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
     const confirmesenha = document.getElementById("confirmesenha").value;
@@ -12,6 +13,7 @@ async function handleSubmit(event) {
     }
 
     const data = {
+        nome,
         email, 
         senha
     }

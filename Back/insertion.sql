@@ -12,6 +12,7 @@ drop table tasks;
 
 create table user_table(
 	id INT auto_increment primary key,
+    nome VARCHAR(35),
     email VARCHAR(255) unique not null,
     senha VARCHAR(255) not null
 );
