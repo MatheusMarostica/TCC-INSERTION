@@ -1,0 +1,371 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: montserrat;
+  }
+  
+  .logo {
+    height: 28vh;
+    width: 14vw;
+    margin-top: -10px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+  }
+  
+  li>a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: montserrat;
+    margin-top: 3.5vh;
+    margin-right: 2vw;
+  }
+  
+  li>a:hover {
+    color: gray;
+    transform: scale(1.05);
+    
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  li {
+    font-weight: bold;
+  }
+
+  #feed{
+    color: gray;
+  }
+  
+  #feed:hover{
+    color: black;
+    transform: scale(1.05);
+  }
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+#showcase {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url("/Front/img/basqueteinclusao.png") center center/cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: color;
+    flex-direction: column;
+    align-content: center;
+    width: 99.5vw;
+    margin-top: 0.4vh;
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#showcase .showcase-container h1 {
+    font-size: 2.9rem;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#showcase .showcase-container p {
+    font-size: 0.9rem;
+    color: rgb(192, 192, 192);
+    font-weight: bold;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sobre{
+    height: 50vh;
+    width: 99.5vw;
+    margin-top: 0vh;
+    background-color: #D9D9D9;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: rgb(148, 148, 148);
+}
+
+.sobre > h4{
+    color: rgb(141, 141, 141);
+    font-size: 1.5rem;
+    height: 30vh;
+    width: 50vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.nós{
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.produto h3{
+    color: rgb(0, 0, 0);
+    margin-top: 2vh;
+    font-size: 1.2rem;
+    height: 5vh;
+    width: 55vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+
+}
+
+.produto h3:hover{
+    cursor: pointer;
+}
+
+#card {
+    height: 55vh;
+    width: 30vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1%;
+    font-size: 1rem;
+}
+
+.foto {
+    width: 28vw;
+    height: 32vh;
+    display: flex;
+}
+
+@media (max-width:415px)  {
+    .cards {
+        flex-direction: column;
+        width: 95vw;
+    }
+
+    #maisinfo {
+        width: 90vw !important;
+        height: 10vh !important;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        margin-top: 1vh;
+    }
+
+/*    .carro-foto{
+        width: 80vw;
+    }
+*/
+    
+    .sobre h4 {
+        font-size: 1.3rem;
+        display: flex;
+    }
+
+    #showcase {
+        height: 60vh;
+    }
+
+    .sobre > h4 {
+        width: 85vw;
+    }
+
+    .produto > .form {
+        height: 70vh !important;
+    }
+
+    .form {
+        margin-top: 5vh;
+    }
+
+    .bloco_forms {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cadastre-se {
+        font-size: 20pt !important;
+    }
+    
+    .mb-3 {
+        width: 55vw !important;
+    }
+
+}
+
+.foto:hover{
+    cursor: pointer;
+}
+
+#maisinfo{
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    width: 30vw;
+    height: 5vh;
+    margin-top: 2vh;
+    border-radius: 6px;
+}
+
+#maisinfo:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: transform 7s;
+}
+
+.cards{
+    display: flex;
+    margin: 2%;
+    align-items: center;
+    display: flex;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    height: 60vh;
+    background: url("/Front/img/idososedf.png") center center/cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 80vh;
+    width: 99.8vw;
+    background-blend-mode: color;
+    font-weight: bold;
+    align-content: center;
+    gap: 10vh;
+}
+
+.form > h3{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 35pt;
+}
+
+.btn-primary{
+    width: 40vw;
+    height: 6vh;
+}
+
+.mb-3{
+    width: 40vw;
+}
+
+.form-label {
+    margin-top: 4vh;
+}
+
+.btn-primary {
+    height: 5vh;
+    margin-top: 3vh;
+    border-radius: 10px;
+    border: none;
+}
+
+.footer{
+    background-color: rgb(0, 0, 0);
+    height: 50vh;
+    width: 99.8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.contato{
+    margin: 0px 0px 0px 0px;
+    margin-top: 1vh;
+}
+
+.itens-footer{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    gap: 0.9vw;
+}
+
+.itens-footer:hover{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer h2{
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Scroll
+
+        Windows
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+  }
+  
+        macOS 
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a;
+    border-radius: 6px;
+  }
+*/

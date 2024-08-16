@@ -14,20 +14,24 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 20vh;
+  height: 15vh;
 }
 
 li>a {
   display: flex;
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
   padding: 10px 20px;
   align-items: center;
   justify-content: space-between;
+  font-family: montserrat;
+  margin-top: 3.5vh;
+  margin-right: 2vw;
 }
 
 li>a:hover {
   color: gray;
+  transform: scale(1.05);
   
 }
 
@@ -46,6 +50,7 @@ li {
 
 #feed:hover{
   color: black;
+  transform: scale(1.05);
 }
 
 .form {
@@ -54,12 +59,15 @@ li {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  width: 98.7vw;
+  width: 100vw;
+  color: white;
+  background: url("/Front/img/fundo.png") center center/cover;
+  background-color: rgb(0, 0, 0);
   background-blend-mode: color;
   font-weight: bold;
   align-content: center;
   gap: 10vh;
-  background-color: rgba(184, 184, 184, 0.397);
+  background-color: rgba(0, 0, 0, 0.781);
 }
 
 .form>h3 {
