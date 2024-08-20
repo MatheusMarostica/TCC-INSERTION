@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 15vh;
+    height: 10vh;
   }
   
   li>a {
@@ -25,14 +25,14 @@
     align-items: center;
     justify-content: space-between;
     font-family: montserrat;
-    margin-top: 3.5vh;
+    margin-top: 1vh;
     margin-right: 2vw;
   }
   
   li>a:hover {
     color: gray;
     transform: scale(1.05);
-    
+    transition: all 0.3s ease-in-out;
   }
   
   ul {
@@ -58,7 +58,8 @@ body{
 }
 
 #showcase {
-    height: 100vh;
+    height: 80vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +69,6 @@ body{
     background-blend-mode: color;
     flex-direction: column;
     align-content: center;
-    width: 99.5vw;
     margin-top: 0.4vh;
 }
 
@@ -272,31 +272,6 @@ h2{
     gap: 10vh;
 }
 
-.form > h3{
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 35pt;
-}
-
-.btn-primary{
-    width: 40vw;
-    height: 6vh;
-}
-
-.mb-3{
-    width: 40vw;
-}
-
-.form-label {
-    margin-top: 4vh;
-}
-
-.btn-primary {
-    height: 5vh;
-    margin-top: 3vh;
-    border-radius: 10px;
-    border: none;
-}
 
 .footer{
     background-color: rgb(0, 0, 0);

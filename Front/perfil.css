@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: montserrat;
+  }
+  
+  .logo {
+    height: 28vh;
+    width: 14vw;
+    margin-top: -10px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+  }
+  
+  li>a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: montserrat;
+    margin-top: 1vh;
+    margin-right: 2vw;
+  }
+  
+  li>a:hover {
+    color: gray;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  li {
+    font-weight: bold;
+  }
+
+  #feed{
+    color: gray;
+  }
+  
+  #feed:hover{
+    color: black;
+    transform: scale(1.05);
+  }
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+#showcase {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url("/Front/img/basqueteinclusao.png") center center/cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: color;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 0.4vh;
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#showcase .showcase-container h1 {
+    font-size: 2.9rem;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#showcase .showcase-container p {
+    font-size: 0.9rem;
+    color: rgb(192, 192, 192);
+    font-weight: bold;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

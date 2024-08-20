@@ -14,7 +14,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 15vh;
+  height: 10vh;
 }
 
 li>a {
@@ -25,14 +25,14 @@ li>a {
   align-items: center;
   justify-content: space-between;
   font-family: montserrat;
-  margin-top: 3.5vh;
+  margin-top: 1vh;
   margin-right: 2vw;
 }
 
 li>a:hover {
   color: gray;
   transform: scale(1.05);
-  
+  transition: all 0.3s ease-in-out;
 }
 
 ul {
@@ -83,6 +83,7 @@ li {
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 40vw;
+  margin-top: 1vh;
 }
 
 .post-card p {

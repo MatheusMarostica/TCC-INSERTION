@@ -45,44 +45,39 @@ button.addEventListener("click", async function (e) {
 
     const results = await response.json();
     console.log(results);
-    if (results.success) {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Sua postagem foi feita com sucesso",
-          showConfirmButton: false,
-          timer: 1500
-        });
 
-    } else {
-        alert(results.message)
-        console.log(results.data)
-    }
-    {
-      // Salvar o post no LocalStorage
-      const storedPosts = localStorage.getItem("posts");
-      const posts = storedPosts ? JSON.parse(storedPosts) : [];
-      posts.push(data);
-      localStorage.setItem("posts", JSON.stringify(posts));
+    // Swal.fire aqui
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Sua postagem foi feita com sucesso",
+      showConfirmButton: false,
+      timer: 1500
+    });
 
-      // CARDS
-      const postCard = document.createElement("div");
-      postCard.className = "post-card";
+    // Salvar o post no LocalStorage
+    const storedPosts = localStorage.getItem("posts");
+    const posts = storedPosts ? JSON.parse(storedPosts) : [];
+    posts.push(data);
+    localStorage.setItem("posts", JSON.stringify(posts));
 
-      const postText = document.createElement("p");
-      postText.textContent = inputText;
+    // CARDS
+    const postCard = document.createElement("div");
+    postCard.className = "post-card";
 
-      const deleteButton = document.createElement("button");
-      deleteButton.textContent = "Excluir";
-      deleteButton.className = "delete-button";
-      deleteButton.dataset.postId = posts.length - 1; // armazena o índice do post
+    const postText = document.createElement("p");
+    postText.textContent = inputText;
 
-      deleteButton.addEventListener("click", deletePost);
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Excluir";
+    deleteButton.className = "delete-button";
+    deleteButton.dataset.postId = posts.length - 1; // armazena o índice do post
 
-      postCard.appendChild(postText);
-      postCard.appendChild(deleteButton);
-      feedContainer.appendChild(postCard);
-    }
+    deleteButton.addEventListener("click", deletePost);
+
+    postCard.appendChild(postText);
+    postCard.appendChild(deleteButton);
+    feedContainer.appendChild(postCard);
   } catch (error) {
     console.error("Error:", error);
     alert("Erro ao fazer o POST!!");
