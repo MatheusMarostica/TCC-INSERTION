@@ -172,6 +172,7 @@ h2{
 }
 
 @media (max-width:415px)  {
+
     .cards {
         flex-direction: column;
         width: 95vw;
@@ -184,11 +185,6 @@ h2{
         font-size: 1.1rem;
         margin-top: 1vh;
     }
-
-/*    .carro-foto{
-        width: 80vw;
-    }
-*/
     
     .sobre h4 {
         font-size: 1.3rem;
@@ -239,6 +235,7 @@ h2{
     height: 5vh;
     margin-top: 2vh;
     border-radius: 6px;
+    transition: all 0.5s ease-in-out;
 }
 
 #maisinfo:hover{
