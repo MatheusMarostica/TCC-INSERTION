@@ -11,7 +11,7 @@ body {
 .coluna-1 {
   width: 40%;
   height: 100vh;
-  background-color: rgba(255, 120, 1, 0.769);
+  background-color: rgba(46, 46, 46, 0.37);
   /* background-color: rgba(1, 44, 31, 0.5); */
 }
 
@@ -28,11 +28,11 @@ body {
 .formLogin {
   display: flex;
   flex-direction: column;
-  background-color: rgba(44, 32, 1, 0.5);
+  background-color: rgb(192, 192, 192);
   border-radius: 7px;
   padding: 40px;
   width: 20vw;
-  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.8);
+  box-shadow: 20px 25px 40px rgba(0, 0, 0, 0.945);
   gap: 5px
 }
 
@@ -48,8 +48,9 @@ body {
 
 .formLogin p {
   display: inline-block;
-  font-size: 14px;
-  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
   margin-bottom: 25px;
   display: flex;
   justify-content: center;
@@ -68,13 +69,13 @@ body {
 }
 
 .formLogin input:focus {
-  border: 2px solid rgb(1, 44, 31);
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .formLogin label {
   font-size: 14px;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .formLogin a {
@@ -82,7 +83,7 @@ body {
   margin-bottom: 20px;
   font-size: 13px;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
   transition: all linear 160ms;
   display: flex;
   align-items: center;
@@ -94,7 +95,7 @@ body {
 }
 
 .btn {
-  background-color: rgba(209, 100, 4, 0.66);
+  background-color: rgba(46, 46, 46, 0.37);
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -107,7 +108,7 @@ body {
 
 .btn:hover {
   transform: scale(1.05);
-  background-color: rgba(78, 54, 2, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .coluna-2 {

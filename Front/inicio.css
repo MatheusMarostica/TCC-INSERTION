@@ -58,13 +58,13 @@ body{
 }
 
 #showcase {
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    background: url("/Front/img/basqueteinclusao.png") center center/cover;
+    background: url("/Front/img/grupo.png") center center/cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: color;
     flex-direction: column;
@@ -118,8 +118,8 @@ h2{
     color: rgb(141, 141, 141);
     font-size: 1.5rem;
     height: 30vh;
-    width: 50vw;
-    text-align: center;
+    width: 65%;
+
     align-items: center;
     justify-content: center;
     display: flex;
@@ -167,7 +167,7 @@ h2{
 
 .foto {
     width: 28vw;
-    height: 32vh;
+    height: 40vh;
     display: flex;
 }
 
