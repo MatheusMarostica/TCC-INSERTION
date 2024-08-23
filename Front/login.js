@@ -17,6 +17,7 @@ async function handleSubmit(event) {
 
     const results = await response.json();
     console.log(results);
+
     if (results.success) {
         Swal.fire({
           position: "center",
@@ -27,6 +28,8 @@ async function handleSubmit(event) {
         }).then((result) => {
           if (result.dismiss === Swal.DismissReason.timer) {
             setTimeout(() => {
+              localStorage.setItem('id_user', results.data[0].id);
+
               window.location.href = "feed.html"; // redirecionar para a página de login
             }, 0); // tempo de espera em milissegundos (0 segundos, pois o timer já foi executado)
           }
