@@ -21,9 +21,19 @@ document.getElementById('perfil_enviar').onclick = async function(e) {
     console.log(results);
 
     if(results.success) {
-      alert('Deu Bom')
+      Swal.fire({
+        title: 'Sucesso!',
+        text: 'Dados atualizados com sucesso!',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+      })
+    } else {
+      Swal.fire({
+        title: 'Erro!',
+        text: 'Erro ao atualizar dados!',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
     }
-    else {
-      alert('Chora')
-    }
+
 }
