@@ -28,13 +28,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
         <!-- <img src="img/logo-escrita.png" id="logo"></a> -->
         <p>Dê o primeiro passo e crie sua conta</p>
         <label for="nome">Nome</label>
-        <input type="nome" placeholder="Digite seu nome" id="nome" autofocus="true" />
+        <input type="nome" placeholder="Digite seu nome" id="nome" autofocus="true" required/>
         <label for="email">E-mail</label>
-        <input type="email" placeholder="Digite seu e-mail" id="email" autofocus="true" />
+        <input type="email" placeholder="Digite seu e-mail" id="email" autofocus="true" required/>
         <label for="password">Senha</label>
-        <input type="password" placeholder="Digite sua senha" id="senha"/>
+        <input type="password" placeholder="Digite sua senha" id="senha" required/>
         <label for="password">Confirme sua senha</label>
-        <input type="password" placeholder="Digite sua senha" id="confirmesenha"/>
+        <input type="password" placeholder="Digite sua senha" id="confirmesenha" required/>
         <a href="login.html">Já possuo uma conta</a>
         <input type="button" onclick=handleSubmit(event) value="Cadastrar-se" class="btn" />
       </form>

@@ -1,48 +1,65 @@
+// Função assíncrona para lidar com o envio do formulário
 async function handleSubmit(event) {
-    event.preventDefault();
+  // Previne o comportamento padrão do formulário (enviar uma requisição GET)
+  event.preventDefault();
 
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
-    const confirmesenha = document.getElementById("confirmesenha").value;
+  // Obtém os valores dos campos do formulário
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+  const confirmesenha = document.getElementById("confirmesenha").value;
 
-    //if cofirmesenha
-    if (senha !== confirmesenha) {
-        alert("As senhas não coincidem. Por favor, tente novamente.");
-        return;
-    }
+  // Verifica se as senhas coincidem
+  if (senha !== confirmesenha) {
+    // Se as senhas não coincidem, exibe uma mensagem de erro
+    alert("As senhas não coincidem. Por favor, tente novamente.");
+    return;
+  }
 
-    const data = {
-        nome,
-        email, 
-        senha
-    }
+  // Cria um objeto com os dados do formulário
+  const data = {
+    nome,
+    email,
+    senha
+  };
 
-    const response = await fetch('http://localhost:3002/api/store/user', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json;charset=UTF-8" },
-        body: JSON.stringify(data)
-    })
+  // Envia uma requisição POST para o servidor com os dados do formulário
+  const response = await fetch('http://localhost:3002/api/store/user', {
+    method: 'POST',
+    headers: { "Content-Type": "application/json;charset=UTF-8" },
+    body: JSON.stringify(data)
+  });
 
-    const results = await response.json();
-    console.log(results);
-    if (results.success) {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Seus cadastro foi feito com sucesso",
-          showConfirmButton: false,
-          timer: 1500
-        }).then((result) => {
-          if (result.dismiss === Swal.DismissReason.timer) {
-            setTimeout(() => {
-              window.location.href = "login.html"; // redirecionar para a página de login
-            }, 0); // tempo de espera em milissegundos (0 segundos, pois o timer já foi executado)
-          }
-        });
-    } else {
-        alert(results.message)
-        console.log(results.data)
-    }
+  // Obtém a resposta do servidor em formato JSON
+  const results = await response.json();
+  console.log(results);
 
+  // Verifica se o cadastro foi bem-sucedido
+  if (results.success) {
+    // Se o cadastro foi bem-sucedido, exibe uma mensagem de sucesso
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Seus cadastro foi feito com sucesso",
+      showConfirmButton: false,
+      timer: 1500
+    }).then((result) => {
+      // Redireciona para a página de login após 0 segundos
+      if (result.dismiss === Swal.DismissReason.timer) {
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 0);
+      }
+    });
+  } else {
+    // Se o cadastro não foi bem-sucedido, exibe uma mensagem de erro
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Erro ao fazer o cadastro",
+      text: results.message,
+      showConfirmButton: true
+    });
+    console.log(results.data);
+  }
 }

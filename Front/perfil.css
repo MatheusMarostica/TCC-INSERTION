@@ -57,7 +57,7 @@ li {
 body{
   background-color: rgb(255, 255, 255);
 }
-/*---------------------------------------------- Rodrigo -------------------------------------------------*/
+
 .container {
   position: relative;
   display: flex;
@@ -91,7 +91,7 @@ label{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 15vw;
+  margin-left: 11vw;
 }
 
 form{
@@ -129,7 +129,7 @@ button:hover{
 
 #name{
   height: 3vh;
-  width: 10vw;
+  width: 20vw;
   border-radius: 4px;
   background-color: rgb(228, 228, 228 );
   display: flex;
@@ -140,7 +140,7 @@ button:hover{
 
 #email{
   height: 3vh;
-  width: 10vw;
+  width: 20vw;
   border-radius: 4px;
   background-color: rgb(228, 228, 228);
   display: flex;
@@ -151,7 +151,7 @@ button:hover{
 
 #senha{
   height: 3vh;
-  width: 10vw;
+  width: 20vw;
   border-radius: 4px;
   background-color: rgb(228, 228, 228 );
   display: flex;
