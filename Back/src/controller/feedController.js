@@ -1,20 +1,12 @@
-// Importa a conexão com o banco de dados
 const connection = require("../config/db");
-
-// Carrega as variáveis de ambiente do arquivo .env
 const dotenv = require("dotenv").config();
 
-// Função assíncrona para armazenar um feed
 async function storefeed(request, response) {
-  // Extrai o texto do corpo da requisição e converte em um array
   const params = Array(request.body.inputText);
 
-  // Define a consulta SQL para inserir um novo registro na tabela feed
   const query = "INSERT INTO feed(texto) VALUES(?)";
 
-  // Executa a consulta SQL com os parâmetros fornecidos
   connection.query(query, params, (err, results) => {
-    // Verifica se a consulta foi bem-sucedida
     if (results) {
       response.status(201).json({
         success: true,
@@ -31,7 +23,38 @@ async function storefeed(request, response) {
   });
 }
 
-// Exporta a função storefeed para que possa ser utilizada em outros módulos
+async function getFeed(request, response) {
+  // Preparar o comando de execução no banco
+  connection.query('SELECT * FROM feed', (err, results) => { 
+      try {  // Tenta retornar as solicitações requisitadas
+          if (results) {  // Se tiver conteúdo 
+              response.status(200).json({
+                  success: true,
+                  message: 'Retorno de usuarios com sucesso!',
+                  data: results
+              });
+          } else {  // Retorno com informações de erros
+              response
+                  .status(400)
+                  .json({
+                      success: false,
+                      message: `Não foi possível retornar os usuários.`,
+                      query: err.sql,
+                      sqlMessage: err.sqlMessage
+                  });
+          }
+      } catch (e) {  // Caso aconteça qualquer erro no processo na requisição, retorna uma mensagem amigável
+          response.status(400).json({
+              succes: false,
+              message: "Ocorreu um erro. Não foi possível realizar sua requisição!",
+              query: err.sql,
+              sqlMessage: err.sqlMessage
+          })
+      }   
+  });
+}
+
 module.exports = {
   storefeed,
+  getFeed
 };
