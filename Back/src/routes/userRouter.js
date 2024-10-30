@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { storeUser, atualizarUser } = require('../controller/userController')
 
-router.post('/store/user', storeUser);
 /**
 * @swagger
 * /tasks/register:
@@ -17,7 +16,8 @@ router.post('/store/user', storeUser);
 *               items:
 *                 type: object
 */
-router.put('/store/userAtualizar', atualizarUser);
+router.post('/store/user', storeUser);
+
 /**
 * @swagger
 * /task/:id:
@@ -33,5 +33,6 @@ router.put('/store/userAtualizar', atualizarUser);
 *               items:
 *                 type: object
 */
+router.put('/store/userAtualizar', atualizarUser);
 
 module.exports = router;

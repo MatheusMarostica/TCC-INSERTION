@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const { storefeed, getFeed } = require("../controller/feedController");
 
-router.post("/store/feed", storefeed);
 /**
 * @swagger
 * /tasks/register:
@@ -18,7 +17,8 @@ router.post("/store/feed", storefeed);
 *               items:
 *                 type: object
 */
-router.get("/get/feed", getFeed);
+router.post("/store/feed", storefeed);
+
 /**
 * @swagger
 * /tasks/list:
@@ -34,5 +34,7 @@ router.get("/get/feed", getFeed);
 *               items:
 *                 type: object
 */
+router.get("/get/feed", getFeed);
+
 module.exports = router;
 

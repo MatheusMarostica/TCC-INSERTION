@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { storelogin } = require('../controller/loginController')
 
-router.post('/store/login', storelogin);
 /**
 * @swagger
 * /tasks/register:
@@ -17,4 +16,6 @@ router.post('/store/login', storelogin);
 *               items:
 *                 type: object
 */
+router.post('/store/login', storelogin);
+
 module.exports = router;

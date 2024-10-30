@@ -2,7 +2,6 @@ const { Router } = require("express");
 const router = Router();
 const { storeTask } = require("../controller/taskController");
 
-router.post("/post/enviar", storeTask);
 /**
 * @swagger
 * /tasks/register:
@@ -18,4 +17,6 @@ router.post("/post/enviar", storeTask);
 *               items:
 *                 type: object
 */
+router.post("/post/enviar", storeTask);
+
 module.exports = router;
