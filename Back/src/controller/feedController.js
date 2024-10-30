@@ -54,6 +54,10 @@ async function getFeed(request, response) {
   });
 }
 
+//buscar id do post no feed
+//usar como parametro para o delete
+//query -> DELETE FROM feed WHERE id = ?
+
 module.exports = {
   storefeed,
   getFeed
