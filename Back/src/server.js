@@ -1,5 +1,4 @@
-const express = require('express')
-const cors = require('cors')
+const app = require('./app')
 require('dotenv').config()
 const swaggerUi = require("swagger-ui-express")
 const swaggerJsDoc = require("swagger-jsdoc")
@@ -16,14 +15,11 @@ const swaggerOptions = {
     },
     apis: [`${__dirname}/routes/*.js`], // caminho para as rotas
 };
- 
-const app = express()
+
 const port = process.env.PORT || 3002
 const taskRouter = require('./routes/taskrouter');
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
-app.use(express.json())
-app.use(cors())
 app.use('/api', taskRouter)
  
 app.listen(port, () => console.log(`Rodando na porta ${port}`))
