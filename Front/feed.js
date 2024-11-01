@@ -121,15 +121,23 @@ button.addEventListener("click", async function (e) {
   }
 });
 
-// Função para excluir um post
-function deletePost(event) {
+async function deletePost(event) {
   const postId = event.target.dataset.postId;
-  const storedPosts = localStorage.getItem("posts");
-  const posts = JSON.parse(storedPosts);
-  posts.splice(postId, 1);
-  localStorage.setItem("posts", JSON.stringify(posts));
-
-  // Remover o cartão de postagem da página
-  const postCard = event.target.parentNode;
-  postCard.remove();
+  try {
+    const response = await fetch(`http://localhost:3002/api/feed/${postId}`, {
+      method: 'DELETE',
+    });
+    const data = await response.json();
+    console.log('Resposta do servidor:', data);
+    if (data.success) {
+      console.log('Post excluído com sucesso');
+      // Remover o cartão de postagem da página
+      const postCard = event.target.parentNode;
+      postCard.remove();
+    } else {
+      console.error('Falha ao excluir o post:', data.message);
+    }
+  } catch (error) {
+    console.error('Erro ao fazer a requisição:', error);
+  }
 }

@@ -58,7 +58,42 @@ async function getFeed(request, response) {
 //usar como parametro para o delete
 //query -> DELETE FROM feed WHERE id = ?
 
+async function deleteFeed(request, response) {
+  const postId = request.params.id;
+
+  console.log(`Tentando excluir o post com ID: ${postId}`); // Log para debug
+
+  const query = "DELETE FROM feed WHERE id = ?";
+
+  connection.query(query, [postId], (err, results) => {
+      if (err) {
+          console.error("Erro ao excluir o post:", err); // Log detalhado do erro
+          return response.status(500).json({
+              success: false,
+              message: "Erro ao excluir o post.",
+              error: err.message
+          });
+      }
+
+      console.log("Resultado da query:", results); // Log do resultado
+
+      if (results.affectedRows === 0) {
+          return response.status(404).json({
+              success: false,
+              message: "Post não encontrado.",
+          });
+      }
+
+      response.status(200).json({
+          success: true,
+          message: "Post excluído com sucesso.",
+          data: results
+      });
+  });
+}
+
 module.exports = {
   storefeed,
-  getFeed
+  getFeed,
+  deleteFeed
 };

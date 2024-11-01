@@ -16,6 +16,11 @@ app.use(cors());
 // Habilita o parse de JSON nos corpos das requisições
 app.use(express.json());
 
+app.use((req, res, next) => {
+    console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+    next();
+})
+
 // Define as rotas do aplicativo
 app.use("/api", router); // Rota para tasks
 app.use("/api", feedrouter); // Rota para feeds
