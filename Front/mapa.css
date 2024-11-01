@@ -2,3 +2,50 @@
     height: 100vh;
     width: 100%;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: montserrat;
+  }
+  
+  .logo {
+    height: 28vh;
+    width: 14vw;
+    margin-top: -10px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #ffffff;
+  }
+  
+  li>a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: montserrat;
+    margin-top: 1vh;
+    margin-right: 2vw;
+  }
+  
+  li>a:hover {
+    color: gray;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  li {
+    font-weight: bold;
+  }
