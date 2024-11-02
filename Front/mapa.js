@@ -33,8 +33,18 @@ document.addEventListener("DOMContentLoaded", function() {
     marker7.bindPopup("<b>Parque Municipal Galvani Guedes Dorneles</b><br>").openPopup();
 
     //Canoas
+    var marker8 = L.marker([-29.915154, -51.168153]).addTo(map);
+    marker8.bindPopup("<b>Parque Getúlio Vargas</b><br>").openPopup();
+    var marker9 = L.marker([-29.936733, -51.178491]).addTo(map);
+    marker9.bindPopup("<b>Parque Eduardo Gomes</b><br>").openPopup();
 
     //Porto Alegre
+    var marker10 = L.marker([-30.036423, -51.216133]).addTo(map);
+    marker10.bindPopup("<b>Parque Redenção</b><br>").openPopup();
+    var marker11 = L.marker([-30.056630, -51.231461]).addTo(map);
+    marker11.bindPopup("<b>Parque Marinha do Brasil</b><br>").openPopup();
+    var marker12 = L.marker([-30.025437, -51.157831]).addTo(map);
+    marker12.bindPopup("<b>Parque Germânia</b><br>").openPopup();
 });
 
 /*
