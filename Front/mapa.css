@@ -49,3 +49,12 @@
   li {
     font-weight: bold;
   }
+
+  #feed{
+    color: gray;
+  }
+  
+  #feed:hover{
+    color: black;
+    transform: scale(1.05);
+  }

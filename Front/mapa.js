@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }).addTo(map);
 
 
-
     //São Leopoldo
     var marker = L.marker([-29.759480, -51.145054]).addTo(map);
     marker.bindPopup("<b>Ginasio Municipal</b><br>").openPopup();
@@ -33,7 +32,54 @@ document.addEventListener("DOMContentLoaded", function() {
     var marker7 = L.marker([-29.854565, -51.138128]).addTo(map);
     marker7.bindPopup("<b>Parque Municipal Galvani Guedes Dorneles</b><br>").openPopup();
 
+    //Canoas
+
+    //Porto Alegre
 });
 
+/*
+document.addEventListener("DOMContentLoaded", function() {
+    var map = L.map('map').setView([-29.75831429389668, -51.15101134694835], 13);
 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
+    // Função para calcular e mostrar a distância
+    function showDistanceToMarkers(userLatLng) {
+        var markers = [
+            { lat: -29.759480, lng: -51.145054, name: "Ginasio Municipal" },
+            { lat: -29.766922, lng: -51.130276, name: "Praça Elis Regina" },
+            { lat: -29.780588, lng: -51.155533, name: "Praça Mansueto Bernardi" },
+            { lat: -29.725177, lng: -51.132524, name: "Praça Walt Disney" },
+            { lat: -29.836008, lng: -51.148745, name: "Praça da Juventude" },
+            { lat: -29.846106, lng: -51.134586, name: "Praça Vila Verde" },
+            { lat: -29.827263, lng: -51.156172, name: "Praça da Prefeitura" },
+            { lat: -29.850422, lng: -51.162979, name: "Praça Coração de Maria" },
+            { lat: -29.854565, lng: -51.138128, name: "Parque Municipal Galvani Guedes Dorneles" }
+        ];
+
+        markers.forEach(function(marker) {
+            var markerLatLng = L.latLng(marker.lat, marker.lng);
+            var distance = userLatLng.distanceTo(markerLatLng).toFixed(2); // distância em metros
+            var popupContent = `<b>${marker.name}</b><br>Distância: ${distance} metros`;
+            var markerInstance = L.marker(markerLatLng).addTo(map);
+            markerInstance.bindPopup(popupContent).openPopup();
+        });
+    }
+
+    // Obter a localização do usuário
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var userLatLng = L.latLng(position.coords.latitude, position.coords.longitude);
+            L.marker(userLatLng).addTo(map).bindPopup("Você está aqui").openPopup();
+            map.setView(userLatLng, 13); // Centraliza o mapa na localização do usuário
+            showDistanceToMarkers(userLatLng); // Mostra a distância para os marcadores
+        }, function() {
+            alert("Não foi possível obter a localização do usuário.");
+        });
+    } else {
+        alert("Geolocalização não é suportada por este navegador.");
+    }
+});
+*/
