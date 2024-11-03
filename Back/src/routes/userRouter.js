@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { storeUser, atualizarUser } = require('../controller/userController')
+const { storeUser, atualizarUser, getUserById } = require('../controller/userController');
 
 /**
 * @swagger
@@ -34,5 +34,7 @@ router.post('/store/user', storeUser);
 *                 type: object
 */
 router.put('/store/userAtualizar', atualizarUser);
+
+router.get('/user/:id', getUserById);
 
 module.exports = router;

@@ -61,7 +61,37 @@ async function atualizarUser(request, response) {
     })
 }
 
+async function getUserById(request, response) {
+    const userId = request.params.id;
+    
+    const query = "SELECT id, nome, email FROM user_table WHERE id = ?";
+    
+    connection.query(query, [userId], (err, results) => {
+        if (err) {
+            return response.status(500).json({
+                success: false,
+                message: "Erro ao buscar usuário",
+                error: err
+            });
+        }
+        
+        if (results.length > 0) {
+            response.status(200).json({
+                success: true,
+                message: "Usuário encontrado com sucesso",
+                data: results
+            });
+        } else {
+            response.status(404).json({
+                success: false,
+                message: "Usuário não encontrado"
+            });
+        }
+    });
+}
+
 module.exports = {
     storeUser,
-    atualizarUser
+    atualizarUser,
+    getUserById
 }

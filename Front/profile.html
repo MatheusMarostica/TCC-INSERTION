@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="perfil.css" />
+        <link rel="stylesheet" href="profile.css" />
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,31 +39,27 @@
                     <li>
                         <div class="form-group">
                             <label for="name">Nome:</label>
-                            <input type="name" id="name" name="name" required>
+                            <span id="nome-usuario"></span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <span id="email-usuario"></span>
                         </div>
                         <div class="form-group">
                             <label for="password">Senha:</label>
-                            <div class="password-container">
-                                <input type="password" id="senha" name="senha" required>
-                                <button type="button" id="toggle-password" class="toggle-password">
-                                </button>
-                            </div>
+                            <span id="senha-usuario"></span>
                         </div>
                     </li>
                 </ul>
             
           
                 <div class="enviar">
-                    <button id="perfil_enviar">Editar</button>
+                    <a href="perfil.html" class="perfil_enviar" id="perfil_enviar">Editar</a>
                 </div>
             </form>
             
         </div>
     </div>
-    <script src="perfil.js"></script>
+    <script src="profile.js"></script>
 </body>
 </html>

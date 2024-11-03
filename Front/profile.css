@@ -1,0 +1,133 @@
+/* profile.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+
+/* Estilo do header/navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #ffffff;
+}
+
+.logo {
+    height: 28vh;
+    width: 14vw;
+    margin-top: -10px;
+}
+
+li>a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: montserrat;
+    margin-top: 1vh;
+    margin-right: 2vw;
+}
+
+li>a:hover {
+    color: gray;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    font-weight: bold;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Card do perfil */
+.square {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.square h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Formulário */
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    width: 34vw;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.form-group span {
+    display: block;
+    color: #333;
+    font-size: 1.1em;
+    padding: 8px 0;
+}
+
+/* Lista */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Botão de editar */
+.enviar {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#perfil_enviar {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#perfil_enviar:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
