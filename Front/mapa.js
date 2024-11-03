@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-
     //São Leopoldo
     var marker = L.marker([-29.759480, -51.145054]).addTo(map);
     marker.bindPopup("<b>Ginasio Municipal</b><br>").openPopup();

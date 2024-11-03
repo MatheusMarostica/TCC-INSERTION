@@ -179,3 +179,9 @@ li {
 .delete-button:active {
   background-color: #ff0000; /* muda a cor de fundo do botão quando o usuário clica nele */
 }
+
+.post-user-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
