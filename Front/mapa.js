@@ -25,6 +25,108 @@ document.addEventListener("DOMContentLoaded", function() {
         </style>
     `;
 
+        // Função para adicionar marcador do usuário
+        function addUserMarker(e) {
+            // Criar popup com formulário
+            var popupContent = `
+                ${popupStyle}
+                <div>
+                    <input type="text" id="markerTitle" placeholder="Nome do local" style="margin-bottom: 5px; width: 100%;">
+                    <textarea id="markerDesc" placeholder="Descrição" style="margin-bottom: 5px; width: 100%;"></textarea>
+                    <button onclick="saveMarker()" style="width: 100%; background-color: #2ecc71; color: white; border: none; padding: 5px;">Salvar</button>
+                </div>
+            `;
+    
+            var marker = L.marker(e.latlng).addTo(map);
+            marker.bindPopup(popupContent).openPopup();
+            
+            // Armazenar temporariamente o marcador
+            window.currentMarker = marker;
+        }
+    
+        // Adicionar evento de clique no mapa
+        map.on('click', addUserMarker);
+    
+        // Função global para salvar o marcador
+        window.saveMarker = function() {
+            var title = document.getElementById('markerTitle').value;
+            var desc = document.getElementById('markerDesc').value;
+            
+            if (!title || !desc) {
+                alert('Por favor, preencha todos os campos');
+                return;
+            }
+    
+            var marker = window.currentMarker;
+            var userId = localStorage.getItem('id_user');
+    
+            // Criar conteúdo final do popup
+            var finalPopupContent = `
+                ${popupStyle}
+                <div class='popup-title'>${title}</div>
+                <div class='popup-description'>${desc}</div>
+            `;
+    
+            // Atualizar o popup do marcador
+            marker.setPopupContent(finalPopupContent);
+    
+            // Salvar no localStorage
+            var markers = JSON.parse(localStorage.getItem('userMarkers') || '[]');
+            markers.push({
+                lat: marker.getLatLng().lat,
+                lng: marker.getLatLng().lng,
+                title: title,
+                description: desc,
+                userId: userId
+            });
+            localStorage.setItem('userMarkers', JSON.stringify(markers));
+    
+            // Opcional: Enviar para o backend
+            saveMarkerToBackend({
+                lat: marker.getLatLng().lat,
+                lng: marker.getLatLng().lng,
+                title: title,
+                description: desc,
+                userId: userId
+            });
+        }
+    
+        // Função para salvar no backend (opcional)
+        async function saveMarkerToBackend(markerData) {
+            try {
+                const response = await fetch('http://localhost:3002/api/markers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(markerData)
+                });
+                const data = await response.json();
+                if (data.success) {
+                    console.log('Marcador salvo com sucesso!');
+                }
+            } catch (error) {
+                console.error('Erro ao salvar marcador:', error);
+            }
+        }
+    
+        // Carregar marcadores salvos do localStorage
+        function loadSavedMarkers() {
+            const savedMarkers = JSON.parse(localStorage.getItem('userMarkers') || '[]');
+            savedMarkers.forEach(markerData => {
+                const marker = L.marker([markerData.lat, markerData.lng]).addTo(map);
+                const popupContent = `
+                    ${popupStyle}
+                    <div class='popup-title'>${markerData.title}</div>
+                    <div class='popup-description'>${markerData.description}</div>
+                `;
+                marker.bindPopup(popupContent);
+            });
+        }
+    
+        // Carregar marcadores salvos ao iniciar
+        loadSavedMarkers();
+
     // São Leopoldo
     var marker = L.marker([-29.759480, -51.145054]).addTo(map);
     marker.bindPopup(popupStyle + "<div class='popup-title'>Ginasio Municipal</div><div class='popup-description'>Um espaço esportivo para eventos e atividades físicas.</div><div class='popup-activities'>Atividades: basquete, vôlei, e aulas de ginástica.</div>").openPopup();
