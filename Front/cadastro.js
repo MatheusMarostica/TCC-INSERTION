@@ -11,8 +11,14 @@ async function handleSubmit(event) {
 
   // Verifica se as senhas coincidem
   if (senha !== confirmesenha) {
-    // Se as senhas não coincidem, exibe uma mensagem de erro
-    alert("As senhas não coincidem. Por favor, tente novamente.");
+    // Se as senhas não coincidem, exibe uma mensagem de erro usando Sweet Alert
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "As senhas não coincidem",
+      text: "Por favor, tente novamente.",
+      showConfirmButton: true
+    });
     return;
   }
 
