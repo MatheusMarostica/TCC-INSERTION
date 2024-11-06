@@ -12,7 +12,7 @@ async function loadPosts() {
     });
 
     const results = await response.json();
-    console.log(results.data);
+    console.log(results);
     feedContainer.innerHTML = ''; // Limpa o container antes de adicionar novos posts
     for (const post of results.data) {
       const postCard = document.createElement("div");

@@ -14,7 +14,9 @@ drop table user_table;
 
 create table feed (
 id int auto_increment primary key,
-texto varchar(255) not null
+texto varchar(255) not null,
+user_id int not null,
+foreign key (user_id) references user_table(id)
 );
 
 select*from feed;
