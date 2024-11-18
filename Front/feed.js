@@ -1,3 +1,5 @@
+const userId = localStorage.getItem('id_user'); // Pega o ID do usuário do localStorage
+
 const button = document.getElementById("handleSubmit");
 const feedContainer = document.getElementById("feed-container");
 
@@ -12,7 +14,7 @@ async function loadPosts() {
     });
 
     const results = await response.json();
-    console.log(results.data);
+    console.log(results);
     feedContainer.innerHTML = ''; // Limpa o container antes de adicionar novos posts
     for (const post of results.data) {
       const postCard = document.createElement("div");
@@ -47,7 +49,6 @@ button.addEventListener("click", async function (e) {
   e.preventDefault();
 
   const inputText = document.getElementById("inputText").value;
-  const userId = localStorage.getItem('id_user'); // Pega o ID do usuário do localStorage
   const data = { inputText, userId };
 
   try {
@@ -103,59 +104,59 @@ button.addEventListener("click", async function (e) {
 // Carregar os dados ao iniciar a página
 loadPosts();
 
-button.addEventListener("click", async function (e) {
-  e.preventDefault();
+// button.addEventListener("click", async function (e) {
+//   e.preventDefault();
 
-  const inputText = document.getElementById("inputText").value;
-  const data = { inputText };
+//   const inputText = document.getElementById("inputText").value;
+//   const data = { inputText, userId };
 
-  try {
-    const response = await fetch("http://localhost:3002/api/store/feed", {
-      method: "POST",
-      headers: { "Content-Type": "application/json;charset=UTF-8" },
-      body: JSON.stringify(data),
-    });
+//   try {
+//     const response = await fetch("http://localhost:3002/api/store/feed", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json;charset=UTF-8" },
+//       body: JSON.stringify(data),
+//     });
 
-    const results = await response.json();
-    console.log(results);
+//     const results = await response.json();
+//     console.log(results);
 
-    // Swal.fire aqui
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: "Sua postagem foi feita com sucesso",
-      showConfirmButton: false,
-      timer: 1500
-    });
+//     // Swal.fire aqui
+//     Swal.fire({
+//       position: "center",
+//       icon: "success",
+//       title: "Sua postagem foi feita com sucesso",
+//       showConfirmButton: false,
+//       timer: 1500
+//     });
 
-    // Salvar o post no LocalStorage
-    const storedPosts = localStorage.getItem("posts");
-    const posts = storedPosts ? JSON.parse(storedPosts) : [];
-    posts.push(data);
-    localStorage.setItem("posts", JSON.stringify(posts));
+//     // Salvar o post no LocalStorage
+//     const storedPosts = localStorage.getItem("posts");
+//     const posts = storedPosts ? JSON.parse(storedPosts) : [];
+//     posts.push(data);
+//     localStorage.setItem("posts", JSON.stringify(posts));
 
-    // CARDS
-    const postCard = document.createElement("div");
-    postCard.className = "post-card";
+//     // CARDS
+//     const postCard = document.createElement("div");
+//     postCard.className = "post-card";
 
-    const postText = document.createElement("p");
-    postText.textContent = inputText;
+//     const postText = document.createElement("p");
+//     postText.textContent = inputText;
 
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Excluir";
-    deleteButton.className = "delete-button";
-    deleteButton.dataset.postId = posts.length - 1; // armazena o índice do post
+//     const deleteButton = document.createElement("button");
+//     deleteButton.textContent = "Excluir";
+//     deleteButton.className = "delete-button";
+//     deleteButton.dataset.postId = posts.length - 1; // armazena o índice do post
 
-    deleteButton.addEventListener("click", deletePost);
+//     deleteButton.addEventListener("click", deletePost);
 
-    postCard.appendChild(postText);
-    postCard.appendChild(deleteButton);
-    feedContainer.appendChild(postCard);
-  } catch (error) {
-    console.error("Error:", error);
-    alert("Erro ao fazer o POST!!");
-  }
-});
+//     postCard.appendChild(postText);
+//     postCard.appendChild(deleteButton);
+//     feedContainer.appendChild(postCard);
+//   } catch (error) {
+//     console.error("Error:", error);
+//     alert("Erro ao fazer o POST!!");
+//   }
+// });
 
 async function deletePost(event) {
   const postId = event.target.dataset.postId;
