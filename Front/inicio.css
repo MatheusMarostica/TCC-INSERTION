@@ -1,60 +1,61 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: montserrat;
-  }
-  
-  .logo {
+    box-sizing: border-box; /* Adiciona box-sizing para um melhor controle de layout */
+    font-family: 'Montserrat', sans-serif; /* Mantém a fonte Montserrat */
+}
+
+body {
+    background-color: #f5f5f5; /* Um cinza claro para um fundo mais suave */
+    color: #333; /* Cor de texto padrão mais escura para melhor legibilidade */
+}
+
+.logo {
     height: 28vh;
     width: 14vw;
     margin-top: -10px;
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 10vh;
-  }
-  
-  li>a {
+    background-color: #ffffff; /* Fundo branco para o nav */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+li > a {
     display: flex;
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    align-items: center;
-    justify-content: space-between;
-    font-family: montserrat;
-    margin-top: 1vh;
+    color: #333; /* Cor de texto padrão */
+    padding: 15px 25px; /* Aumenta o padding para uma área de clique maior */
     margin-right: 2vw;
-  }
-  
-  li>a:hover {
-    color: gray;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+
+li > a:hover {
+    background-color: #e0e0e0; /* Fundo suave ao passar o mouse */
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  ul {
+}
+
+ul {
     display: flex;
     list-style: none;
-  }
-  
-  li {
-    font-weight: bold;
-  }
+}
 
-  #feed{
+li {
+    font-weight: bold;
+}
+
+#feed {
     color: gray;
-  }
-  
-  #feed:hover{
+}
+
+#feed:hover {
     color: black;
     transform: scale(1.05);
-  }
-
-body{
-    background-color: rgb(255, 255, 255);
 }
 
 #showcase {
@@ -68,7 +69,6 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: color;
     flex-direction: column;
-    align-content: center;
     margin-top: 0.4vh;
 }
 
@@ -79,90 +79,92 @@ body{
 }
 
 #showcase .showcase-container h1 {
-    font-size: 2.9rem;
+    font-size: 3rem; /* Aumenta o tamanho da fonte */
     font-weight: bold;
-    display: flex;
     text-align: center;
-    justify-content: center;
 }
 
 #showcase .showcase-container p {
-    font-size: 0.9rem;
-    color: rgb(192, 192, 192);
+    font-size: 1rem; /* Aumenta o tamanho da fonte */
+    color: rgba(255, 255, 255, 0.8); /* Texto mais suave */
     font-weight: bold;
     margin-top: 15px;
-    display: flex;
-    justify-content: center;
     text-align: center;
 }
 
-.sobre{
+.sobre {
     height: 50vh;
     width: 99.5vw;
     margin-top: 0vh;
     background-color: #D9D9D9;
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
-}
-
-h2{
     align-items: center;
     justify-content: center;
-    display: flex;
+}
+
+h2 {
     color: rgb(148, 148, 148);
 }
 
-.sobre > h4{
+.sobre > h4 {
     color: rgb(141, 141, 141);
     font-size: 1.5rem;
-    height: 30vh;
-    width: 65%;
-
-    align-items: center;
-    justify-content: center;
+    height: auto; /* Ajusta a altura automaticamente */
+    width: 65%; /* Mantém a largura */
     display: flex;
+    align-items: flex-start; /* Alinha o texto ao topo */
+    justify-content: flex-start; /* Alinha o texto à esquerda */
+    text-align: justify; /* Justifica o texto */
+    margin-top: 20px; /* Adiciona margem superior para espaçamento */
+    padding-left: 1.25em; /* Recuo de 1,25 cm */
 }
 
-.nós{
+.nós {
     font-size: 1.2rem;
     color: #000000;
 }
 
-.produto h3{
+.produto h3 {
     color: rgb(0, 0, 0);
     margin-top: 2vh;
     font-size: 1.2rem;
     height: 5vh;
     width: 55vw;
-    align-items: center;
     display: flex;
     justify-content: center;
 }
 
-.container{
+.container {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-top: 5vh;
-
 }
 
-.produto h3:hover{
+.produto h3:hover {
     cursor: pointer;
+    color: #007BFF; /* Muda a cor ao passar o mouse */
+    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
 }
 
 #card {
     height: 55vh;
     width: 30vw;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff; /* Mantenha o fundo branco */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 1%;
     font-size: 1rem;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+#card:hover {
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
 }
 
 .foto {
@@ -171,40 +173,41 @@ h2{
     display: flex;
 }
 
-.foto:hover{
+.foto:hover {
     cursor: pointer;
+    opacity: 0.8; /* Leve transparência ao passar o mouse */
 }
 
-#maisinfo{
-    background-color: rgb(0, 0, 0);
+#maisinfo {
+    background-color: #007BFF; /* Cor de fundo azul */
     color: #ffffff;
     width: 30vw;
     height: 5vh;
     margin-top: 2vh;
     border-radius: 6px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out; /* Transição mais rápida */
 }
 
-#maisinfo:hover{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    transition: transform 7s;
+#maisinfo:hover {
+    background-color: #ffffff; /* Fundo branco ao passar o mouse */
+    color: #007BFF; /* Texto azul ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
-.cards{
+.cards {
     display: flex;
     margin: 2%;
     align-items: center;
     display: flex;
 }
 
-.form{
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    color: #333; /* Cor do texto */
     height: 60vh;
     background: url("/Front/img/idososedf.png") center center/cover;
     background-color: rgba(0, 0, 0, 0.8);
@@ -214,4 +217,6 @@ h2{
     font-weight: bold;
     align-content: center;
     gap: 10vh;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
 }

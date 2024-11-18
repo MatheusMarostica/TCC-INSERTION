@@ -6,37 +6,34 @@
     font-family: montserrat;
 }
 
-/* Estilo do header/navbar */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 10vh;
-    background-color: #ffffff;
-}
-
 .logo {
     height: 28vh;
     width: 14vw;
     margin-top: -10px;
 }
 
-li>a {
+nav {
     display: flex;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
     align-items: center;
     justify-content: space-between;
-    font-family: montserrat;
-    margin-top: 1vh;
-    margin-right: 2vw;
+    height: 10vh;
+    background-color: #ffffff; /* Fundo branco para o nav */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-li>a:hover {
-    color: gray;
+li > a {
+    display: flex;
+    text-decoration: none;
+    color: #333; /* Cor de texto padrão */
+    padding: 15px 25px; /* Aumenta o padding para uma área de clique maior */
+    margin-right: 2vw;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+
+li > a:hover {
+    background-color: #e0e0e0; /* Fundo suave ao passar o mouse */
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
 }
 
 ul {
