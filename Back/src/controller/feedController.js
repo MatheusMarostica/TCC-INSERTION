@@ -3,36 +3,36 @@ const dotenv = require("dotenv").config();
 
 async function getFeed(request, response) {
   const query = `
-      SELECT feed.id, feed.texto, user_table.nome
+      SELECT feed.id, feed.texto, feed.user_id, user_table.nome
       FROM feed
       JOIN user_table ON feed.user_id = user_table.id
-      ORDER BY feed.id DESC
+      ORDER BY feed.id DESC;
   `;
 
-  connection.query(query, (err, results) => { 
-      try {
-          if (results) {
-              response.status(200).json({
-                  success: true,
-                  message: 'Retorno de posts com sucesso!',
-                  data: results
-              });
-          } else {
-              response.status(400).json({
-                  success: false,
-                  message: `Não foi possível retornar os posts.`,
-                  query: err.sql,
-                  sqlMessage: err.sqlMessage
-              });
-          }
-      } catch (e) {
-          response.status(400).json({
-              success: false,
-              message: "Ocorreu um erro. Não foi possível realizar sua requisição!",
-              query: err.sql,
-              sqlMessage: err.sqlMessage
-          });
-      }   
+  connection.query(query, (err, results) => {
+    try {
+      if (results) {
+        response.status(200).json({
+          success: true,
+          message: 'Retorno de posts com sucesso!',
+          data: results
+        });
+      } else {
+        response.status(400).json({
+          success: false,
+          message: `Não foi possível retornar os posts.`,
+          query: err.sql,
+          sqlMessage: err.sqlMessage
+        });
+      }
+    } catch (e) {
+      response.status(400).json({
+        success: false,
+        message: "Ocorreu um erro. Não foi possível realizar sua requisição!",
+        query: err.sql,
+        sqlMessage: err.sqlMessage
+      });
+    }
   });
 }
 
@@ -41,19 +41,19 @@ async function storefeed(request, response) {
   const query = "INSERT INTO feed(texto, user_id) VALUES(?, ?)";
 
   connection.query(query, [inputText, userId], (err, results) => {
-      if (results) {
-          response.status(201).json({
-              success: true,
-              message: "Post criado com sucesso!",
-              data: results,
-          });
-      } else {
-          response.status(400).json({
-              success: false,
-              message: "Erro ao criar o post!",
-              data: err,
-          });
-      }
+    if (results) {
+      response.status(201).json({
+        success: true,
+        message: "Post criado com sucesso!",
+        data: results,
+      });
+    } else {
+      response.status(400).json({
+        success: false,
+        message: "Erro ao criar o post!",
+        data: err,
+      });
+    }
   });
 }
 

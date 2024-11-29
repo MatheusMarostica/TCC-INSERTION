@@ -36,7 +36,11 @@ async function loadPosts() {
 
       postCard.appendChild(userName);
       postCard.appendChild(postText);
-      postCard.appendChild(deleteButton);
+
+      if (post.user_id === Number(userId)) {
+        postCard.appendChild(deleteButton);
+      }
+
       feedContainer.appendChild(postCard);
     }
   } catch (error) {
@@ -81,25 +85,25 @@ button.addEventListener("click", async function (e) {
     alert("Erro ao fazer o POST!!");
   }
 });
-    /*results.data.forEach((post) => {
-      const postCard = document.createElement("div");
-      postCard.className = "post-card";
+/*results.data.forEach((post) => {
+  const postCard = document.createElement("div");
+  postCard.className = "post-card";
 
-      const postText = document.createElement("p");
-      postText.textContent = post.inputText;
+  const postText = document.createElement("p");
+  postText.textContent = post.inputText;
 
-      const deleteButton = document.createElement("button");
-      deleteButton.textContent = "Excluir";
-      deleteButton.className = "delete-button";
-      deleteButton.dataset.postId = posts.indexOf(post); // armazena o índice do post
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Excluir";
+  deleteButton.className = "delete-button";
+  deleteButton.dataset.postId = posts.indexOf(post); // armazena o índice do post
 
-      deleteButton.addEventListener("click", deletePost);
+  deleteButton.addEventListener("click", deletePost);
 
-      postCard.appendChild(postText);
-      postCard.appendChild(deleteButton);
-      feedContainer.appendChild(postCard);
-  
-    });*/
+  postCard.appendChild(postText);
+  postCard.appendChild(deleteButton);
+  feedContainer.appendChild(postCard);
+ 
+});*/
 
 // Carregar os dados ao iniciar a página
 loadPosts();
