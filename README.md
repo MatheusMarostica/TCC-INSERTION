@@ -1,31 +1,41 @@
-TCC-INSERTION
-Descrição
+Claro! Abaixo está uma versão mais bonita e completa do README para o seu projeto "TCC-INSERTION". Esta versão inclui seções mais estruturadas e detalhes adicionais para melhorar a apresentação.
 
-O projeto TCC-INSERTION é uma aplicação voltada para a inserção e gestão de dados relativos ao trabalho de conclusão de curso (TCC). A aplicação foi desenvolvida utilizando tecnologias web modernas, com foco na usabilidade e eficiência no gerenciamento das informações.
-
-Tecnologias Utilizadas
-JavaScript - Linguagem de programação principal utilizada na aplicação.
-HTML - Linguagem de marcação para estruturação do conteúdo da web.
-CSS - Folhas de estilo utilizadas para a formatação visual da aplicação.
-Funcionalidades
-Inserção de Dados: Permite que usuários insiram informações relacionadas ao TCC.
-Visualização de Dados: Usuários podem visualizar as entradas já registradas na aplicação.
-Edição e Exclusão: Funcionalidades que permitem editar entradas existentes e excluir dados que não são mais necessários.
-Estrutura do Projeto
-
-O projeto está organizado em duas principais pastas:
-
-Back: Contém toda a lógica de backend da aplicação, incluindo API e banco de dados.
-Front: Contém todos os arquivos relacionados à interface do usuário, incluindo HTML, CSS e JavaScript.
-Como Começar
-
-Para executar o projeto localmente, siga as etapas abaixo:
-
-Clone o repositório:
-
-bash
+markdown
 Copy code
-1git clone https://github.com/MatheusMarostica/TCC-INSERTION.git
+1# TCC-INSERTION
+2
+3![Project Banner](https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png) <!--[Substitua pelo URL da imagem do seu projeto, se necessário]-->
+4
+5## Descrição
+6
+7O **TCC-INSERTION** é um aplicativo voltado para a inserção e gestão de dados relacionados ao trabalho de conclusão de curso (TCC). Ele foi desenvolvido com tecnologias web modernas, priorizando a usabilidade e a eficiência no gerenciamento das informações。
+8
+9## Funcionalidades
+10
+11- **Inserção de Dados:** Permite que usuários insiram informações relacionadas ao TCC.
+12- **Visualização de Dados:** Usuários podem visualizar as entradas já registradas na aplicação.
+13- **Edição e Exclusão:** Funcionalidades que permitem editar entradas existentes e excluir dados que não são mais necessários.
+14
+15## Tecnologiasizadas
+16
+17- **JavaScript:** Linguagem de programação principal.
+18- **HTML:** Estruturação do conteúdo web.
+19- **CSS:** Estilização visual da aplicação.
+20
+21## Estrutura do Projeto
+22
+23O projeto está organizado em duas pastas principais:
+24
+25- **Back:** Contém toda a lógica de backend da aplicação, incluindo API e banco de dados.
+26- **Front:** Inclui todos os arquivos relacionados à interface do usuário, como HTML, CSS e JavaScript.
+27
+28## Como Começar
+29
+30Siga as etapas abaixo para executar o projeto localmente:
+31
+321. **Clone o repositório:**
+33   ```bash
+34   git clone https://github.com/MatheusMarostica/TCC-INSERTION.git
 
 Navegue até o diretório do projeto:
 
@@ -33,7 +43,7 @@ bash
 Copy code
 1cd TCC-INSERTION
 
-Instale as dependências: Você pode utilizar o npm ou yarn para isso, dependendo do gerenciador de pacotes que preferir.
+Instale as dependências: Você pode utilizar o npm ou yarn para isso:
 
 bash
 Copy code
@@ -49,11 +59,11 @@ Copy code
 2# ou
 3yarn start
 
-Acesse a aplicação através do navegador em http://localhost:3000 (ou a porta configurada).
+Acesse a aplicação em http://localhost:3000 (ou a porta configurada).
 
 Contribuição
 
-Contribuições são bem-vindas! Se você deseja contribuir, sinta-se à vontade para abrir uma issue ou um pull request.
+Contribuições são sempre bem-vindas! Para contribuir:
 
 Fork este repositório.
 Crie uma nova branch para sua feature ou correção:
@@ -74,6 +84,4 @@ Este projeto está licenciado sob a MIT License.
 
 Contato
 
-Para mais informações, você pode entrar em contato pelo email: matheus.marostica.lemos@gmail.com.
-
-Sinta-se à vontade para modificar este README conforme a necessidade do seu projeto! Ele deve refletir sua visão e as particularidades do seu trabalho.
+Para mais informações, entre em contato pelo email: matheus.marostica.lemos@gmail.com.
