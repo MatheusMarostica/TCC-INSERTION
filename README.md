@@ -1,8 +1,5 @@
 # TCC-INSERTION
 
-![Banner do Projeto](![logoimg](https://github.com/user-attachments/assets/198ac89d-ec2c-4f69-a5d9-d041931b6e8c)
-)  <!-- Substitua por uma imagem real -->
-
 Sistema acadêmico desenvolvido como Trabalho de Conclusão de Curso (TCC) para gestão de trabalhos acadêmicos.
 
 ## 📌 Sobre o Projeto
