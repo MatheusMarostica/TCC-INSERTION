@@ -62,8 +62,6 @@ Análise de requisitos
 
 Documentação técnica
 
-Está disponível em: [Link para Documento do TCC] <!-- Adicione o link se existir -->
-
 📧 Contato
 Desenvolvedor:
 Matheus Marostica
