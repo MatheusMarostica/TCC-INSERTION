@@ -58,3 +58,38 @@ Este é um projeto escolar desenvolvido como requisito curricular. Não aceitamo
 git clone https://github.com/MatheusMarostica/TCC-INSERTION.git
 cd TCC-INSERTION
 npm install
+Configuração
+Renomeie .env.example para .env
+
+Configure as variáveis de ambiente:
+
+env
+MONGODB_URI=sua_string_de_conexão
+SECRET_KEY=sua_chave_secreta
+Inicialização
+bash
+npm start
+Acesse: http://localhost:3000
+
+📚 Documentação Acadêmica
+O trabalho completo com:
+
+Fundamentação teórica
+
+Diagramas UML
+
+Análise de requisitos
+
+Documentação técnica
+
+Está disponível em: [Link para Documento do TCC] <!-- Adicione o link se existir -->
+
+📧 Contato
+Desenvolvedor:
+Matheus Marostica
+matheus.marostica.lemos@gmail.com
+
+Instituição:
+[Nome da Faculdade/Universidade]
+[Departamento/Curso]
+
