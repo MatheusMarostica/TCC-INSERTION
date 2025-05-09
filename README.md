@@ -37,13 +37,6 @@ Projeto desenvolvido exclusivamente para fins acadêmicos como requisito parcial
 
 Este é um projeto escolar desenvolvido como requisito curricular. Não aceitamos contribuições externas ou pull requests.
 
-## 🚀 Execução Local
-
-### Requisitos
-- Node.js v18+
-- MongoDB 6.0+
-- NPM 9+
-
 ### Instalação
 ```bash
 git clone https://github.com/MatheusMarostica/TCC-INSERTION.git
