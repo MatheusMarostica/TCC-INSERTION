@@ -4,7 +4,7 @@ Sistema acadêmico desenvolvido como Trabalho de Conclusão de Curso (TCC) para 
 
 ## 📌 Sobre o Projeto
 
-Projeto desenvolvido exclusivamente para fins acadêmicos como requisito parcial para obtenção do grau de [Seu Curso] na [Sua Instituição de Ensino].
+Projeto desenvolvido exclusivamente para fins acadêmicos como requisito parcial para conclusão do curso técnico em desenvolvimento web integrado ao ensino médio no SENAC São Leopoldo.
 
 **Ano de Desenvolvimento:** 2024
 
