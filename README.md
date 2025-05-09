@@ -42,7 +42,7 @@ Instale as dependências: Você pode utilizar o npm ou yarn para isso:
 bash
 
 npm install
-# ou
+ou
 yarn install
 
 Inicie a aplicação:
@@ -50,7 +50,7 @@ Inicie a aplicação:
 bash
 
 npm start
-# ou
+ou
 yarn start
 
 Acesse a aplicação em http://localhost:3000 (ou a porta configurada).
