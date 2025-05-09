@@ -8,14 +8,12 @@ Sistema acadêmico desenvolvido como Trabalho de Conclusão de Curso (TCC) para 
 
 Projeto desenvolvido exclusivamente para fins acadêmicos como requisito parcial para obtenção do grau de [Seu Curso] na [Sua Instituição de Ensino].
 
-**Orientador:** [Nome do Orientador]  
 **Ano de Desenvolvimento:** 2024
 
 ## ✨ Funcionalidades
 
 ### Cadastro Acadêmico
 - Inserção de dados completos de TCCs
-- Armazenamento de metadados (autores, orientadores, bancas)
 - Upload de documentos
 
 ### Consultas
@@ -32,15 +30,10 @@ Projeto desenvolvido exclusivamente para fins acadêmicos como requisito parcial
 
 **Frontend:**
 - HTML5, CSS3, JavaScript
-- Bootstrap 5 (para layout responsivo)
 
 **Backend:**
 - Node.js + Express
-- MongoDB (banco de dados NoSQL)
-
-**Infraestrutura:**
-- Hospedado em [Nome do Serviço, se aplicável]
-- Deploy automático via [Ferramenta usada]
+- MySQL
 
 ## 🔒 Acesso Restrito
 
@@ -64,8 +57,6 @@ Renomeie .env.example para .env
 Configure as variáveis de ambiente:
 
 env
-MONGODB_URI=sua_string_de_conexão
-SECRET_KEY=sua_chave_secreta
 Inicialização
 bash
 npm start
@@ -75,8 +66,6 @@ Acesse: http://localhost:3000
 O trabalho completo com:
 
 Fundamentação teórica
-
-Diagramas UML
 
 Análise de requisitos
 
@@ -90,6 +79,5 @@ Matheus Marostica
 matheus.marostica.lemos@gmail.com
 
 Instituição:
-[Nome da Faculdade/Universidade]
-[Departamento/Curso]
+SENAC São Leopoldo, RS
 
