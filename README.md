@@ -1,4 +1,4 @@
-Segue abaixo a estrutura do README.md para o projeto "TCC-INSERTION", incluindo a visualização do código conforme seu pedido:
+Claro! Aqui está a versão clean e organizada do README para o seu projeto "TCC-INSERTION":
 
 markdown
 Copy code
@@ -12,9 +12,9 @@ Copy code
 8
 9## Funcionalidades
 10
-11- **Inserção de Dados:** Permite usuários insiram informações detalhadas sobre o TCC, como título, resumo, autores, etc.
+11- **Inserção de Dados:** Permite que usuários insiram informações detalhadas sobre o TCC, como título, resumo, autores, etc.
 12- **Visualização de Dados:** Usuários podem visualizar todas as entradas já registradas na aplicação através de uma interface clara e acessível.
-13- **Edição e Exclusão de Dados:** Funcionalidades robustas que permitem a edição de entradas existentes e a exclusão de dados que não são mais necessários.
+13- **Edição e Exclusão:** Funcionalidades robustas que permitem a edição de entradas existentes e a exclusão de dados que não são mais necessários.
 14- **Relatórios Personalizáveis:** Geração de relatórios que resumem as informações inseridas, facilitando o acompanhamento do progresso do TCC.
 15- **Notificações:** Alertas sobre prazos importantes e datas de entrega, ajudando os usuários a se manterem organizados e informados.
 16
@@ -68,18 +68,33 @@ Acesse a aplicação em http://localhost:3000 (ou a porta configurada).
 
 Contribuição
 
-Contribuições não são aceitas no momento, pois se trata de um projeto acadêmico de conclusão de curso. No entanto, sinta-se à vontade para entrar em contato para sugestões ou feedbacks sobre a aplicação.
+Contribuições são sempre bem-vindas! Para contribuir:
 
+Fork este repositório.
+Crie uma nova branch para sua feature ou correção:
+bash
+Copy code
+1git checkout -b minha-nova-feature
+Realize suas alterações e faça commit:
+bash
+Copy code
+1git commit -m 'Adiciona nova feature'
+Enviei sua branch:
+bash
+Copy code
+1git push origin minha-nova-feature
 Licença
 
-Este projeto está licenciado sob a MIT License. Para mais detalhes, consulte o arquivo LICENSE.
+Este projeto está licenciado sob a MIT License.
 
 Contato
 
-Para mais informações, entre em contato pelo email: matheus.marostica.lemos@gmail.com
-
-GitHub: https://github.com/MatheusMarostica
+Para mais informações, entre em contato pelo email: matheus.marostica.lemos@gmail.com.
 
 Copy code
 1
-2Você pode copiar e colar este código no seu arquivo `README.md`. Sinta-se à vontade para ajustar quaisquer informações ou adicionar detalhes adicionais conforme necessário!
+2### Observações:
+31. Substitua o link da imagem do banner (`https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png`) por um com conteúdo relevante para seu projeto.
+42. Verifique e ajuste as instruções de instalação e execução conforme necessário, baseado no ambiente e nas necessidades do seu projeto.
+5
+6Sinta-se à vontade para modificar o texto onde você achar necessário!
